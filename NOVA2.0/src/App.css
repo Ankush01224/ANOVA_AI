@@ -1,0 +1,65 @@
+/* All global styles handled in index.css */
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+span{
+    background: linear-gradient(to right,blue,red);
+    font-size: 2vmax;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.main img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet devices (768px and up) */
+@media (min-width: 768px) {
+  .main {
+    padding: 40px;
+  }
+
+  .main img {
+    max-width: 500px;
+  }
+}
+
+/* Desktop devices (1024px and up) */
+@media (min-width: 1024px) {
+  .main {
+    padding: 60px;
+  }
+
+  .main img {
+    max-width: 700px;
+  }
+}
+
+/* Small phones (up to 480px) */
+@media (max-width: 480px) {
+  .main {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .main img {
+    max-width: 100%;
+  }
+}
