@@ -9,7 +9,7 @@ const MODEL_CANDIDATES = [
 ];
 
 export const generateAIResponse = async (prompt) => {
-  const apiKey = import.meta.env.GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
   if (!apiKey) {
     throw new Error('VITE_GEMINI_API_KEY is missing in your .env file!');
   }
