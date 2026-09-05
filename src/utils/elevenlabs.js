@@ -2,7 +2,7 @@
 export const ANOVA_VOICE_ID = 'JBFqnCBsd6RMkjVDRZzb';
 
 export const textToSpeech = async (text, voiceId = ANOVA_VOICE_ID) => {
-  const apiKey = import.meta.env.ELEVENLABS_API_KEY;
+  const apiKey = import.meta.env.VITE_ELEVENLABS_API_KEY;
   if (!apiKey) throw new Error('VITE_ELEVENLABS_API_KEY is missing in your .env file!');
 
   const response = await fetch(
@@ -96,7 +96,7 @@ export async function speakAssistantVoice(text, hooks = {}) {
   const { revokePrevious, setObjectUrl } = hooks;
   revokePrevious?.();
 
-  const apiKey = import.meta.env.ELEVENLABS_API_KEY;
+  const apiKey = import.meta.env.VITE_ELEVENLABS_API_KEY;
   if (apiKey) {
     try {
       const url = await textToSpeech(text, ANOVA_VOICE_ID);
